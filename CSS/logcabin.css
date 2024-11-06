@@ -1,0 +1,684 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #D2DEDC;
+  /* min-width: 1200px; */
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 40px;
+  /* font-family: "Microsoft YaHei", 微软雅黑; */
+  font-family: 'Potta One', sans-serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  color: #615F58;
+}
+
+h5 {
+  font-size: 22px;
+  font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+
+.head {
+  width: 100%;
+  height: 80px;
+  background-color: #636E7F;
+}
+
+.head-top {
+  width: 1200px;
+  height: 80px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.head-logo {
+  width: 146px;
+  height: 80px;
+  float: left;
+}
+
+.head-list {
+  min-width: 842px;
+  float: right;
+}
+
+.head-list nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.head-list nav ul {
+  display: flex;
+  /* ul 內的 li 項目水平排列 */
+}
+
+.head-list nav li {
+  margin: 15px;
+  /* 設定項目之間的間距 */
+  color: #F6EED1;
+  /* 文字顏色 */
+  font-size: 18px;
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 800;
+  /* text-shadow: 0px 0px 10px #000000; */
+}
+
+.head-list nav li:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 20px #ffffff;
+  /* box-shadow: 0px 10px 10px -10px #ffffff; */
+  /* 滑鼠懸停效果 */
+  cursor: pointer;
+  /* 滑鼠指到會變成手指 */
+}
+
+.clear {
+  clear: both;
+}
+
+/* -------------------------開頭動畫---------------------------- */
+.mainHeading {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0 40px;
+  background-color: #7A8492;
+  background-image: url(../assets/logcabin/logcabin-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading {
+    padding: 0;
+  }
+}
+
+.mainHeading__content {
+  max-width: 1110px;
+  min-height: 600px;
+  /* ---------------------------置中-------------------------- */
+  left: 50%;
+  transform: translateX(-50%);
+  /* --------------------------------------------------------- */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading__content {
+    min-height: 500px;
+  }
+}
+
+/* -----------------------------左邊文字區+動畫------------------------- */
+.mainHeading__text {
+  z-index: 1;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  max-width: 620px;
+  width: 50%;
+  backdrop-filter: blur(8px);
+  /* 背後圖像模糊 */
+  transform: translateY(-20px);
+  animation: text 0.8s 0.6s ease backwards;
+  position: relative;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+/* -----------------------------文字區白色右跑到左動畫--------------------- */
+.mainHeading__text:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: 0;
+  animation: line 0.8s 0.6s ease backwards;
+}
+
+@keyframes line {
+  0% {
+    right: 0;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading__text {
+    padding: 20px;
+    margin: 90px 0 40px 0;
+  }
+}
+
+/* ----------------------------標題內文-------------------- */
+.mainHeading__preTitle {
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.mainHeading__title {
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading__title {
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+}
+
+.mainHeading__description {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading__description {
+    font-size: 14px;
+  }
+}
+
+/* ---------------------------右邊圖片區+動畫-------------------------- */
+.mainHeading__image {
+  right: 0;
+  max-width: 500px;
+  width: 60%;
+  height: 600px;
+  margin-right: 100px;
+  transform: translatey(50px);
+  position: absolute;
+  overflow: hidden;
+  animation: image 0.6s 0.2s ease backwards;
+}
+
+@media screen and (max-width: 799px) {
+  .mainHeading__image {
+    height: 480px;
+    width: 70%;
+    transform: translatey(100px);
+    right: -6%;
+  }
+}
+
+@keyframes image {
+  0% {
+    opacity: 0;
+    transform: translatey(200px);
+  }
+}
+
+.mainHeading__image:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 100%;
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+     */
+  background-color: #D2DEDCF0;
+  opacity: 1;
+  left: 0;
+  animation: imageBefore 1s 0.2s ease backwards;
+}
+
+@keyframes imageBefore {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+.mainHeading__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------開頭動畫按鈕 暫時不用-------------------- */
+/* .cta {
+  padding: 16px 32px;
+  color: #637498;
+  background-color: transparent;
+  border: 1px solid rgba(99, 116, 152, 0.4);
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 32px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 0px rgba(99, 116, 152, 0.2);
+  transition: all 0.4s ease;
+}
+
+.cta:hover {
+  border: 1px solid rgba(99, 116, 152, 0.1);
+  box-shadow: inset 0px -80px 0px rgba(99, 116, 152, 0.1);
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 799px) {
+  .cta {
+    margin-top: 16px;
+  }
+} */
+
+/* ----------------------------------------------------------------- */
+
+/* -----------------------房型1雙人------------------------------ */
+.cabin {
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 房型1左邊文字區 */
+.cabin-main {
+  width: 300px;
+  height: 500px;
+  position: relative;
+}
+
+.cabin-main-text h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cabin-main-text h6 {
+  font-size: 18px;
+  /* font-family: "Microsoft YaHei", 微软雅黑; */
+  font-family: 'Potta One', sans-serif;
+  font-weight: 100;
+  color: #403f3d;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.yoho-hr {
+  width: 80px;
+  border: 1px solid #504f4d;
+  position: absolute;
+  right: 40px;
+  top: 131px;
+}
+
+.cabin-main-text span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.btn-order {
+  width: 300px;
+  height: 40px;
+  background-color: #FAB005;
+  color: #363533;
+  border: 1px solid #363533;
+  position: absolute;
+  bottom: 30px;
+  /* outline: none; 移除点击后的外边框 */
+  font-size: 20px;
+  font-family: 'Potta One', sans-serif;
+  font-weight: 100;
+  transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+  cursor: pointer;
+  background-color: #ff8383;
+  /* transform: translateY(-5px); */
+  transform: scale(0.95);
+}
+
+/* 房型1右邊照片區 */
+.cabin-main-photo {
+  width: 600px;
+  height: 500px;
+  background-color: #c5c5c5;
+  position: relative;
+}
+
+.main-photo-text {
+  width: 40px;
+  height: 180px;
+  background-color: #ffffff;
+  position: absolute;
+  top: -30px;
+  right: 30px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-photo-text h4 {
+  font-size: 24px;
+  font-family: 'Potta One', sans-serif;
+  font-weight: 100;
+  color: #403f3d;
+  letter-spacing: 4px;
+}
+
+/* 房型1三張照片區 */
+.cabin1-photo-outer {
+  width: 1200px;
+  height: 360px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-inner {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* overflow: hidden;為了讓photo-text2初始位置突出的地方消失 */
+  z-index: 1;
+}
+
+.photo-text1 {
+  width: 300px;
+  height: 55px;
+  padding: 0 30px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+/* 上箭頭 */
+.texticon1 {
+  position: absolute;
+  right: 30px;
+  opacity: 1;
+}
+
+/* 下箭頭隱藏 */
+.texticon2 {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+}
+
+/* 點擊後上箭頭隱藏 */
+.texticon1.opacity {
+  opacity: 0;
+}
+
+/* 點擊後下箭頭顯示 */
+.texticon2.opacity {
+  opacity: 1;
+}
+
+.photo-text1 h4 {
+  font-size: 24px;
+  font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+.photo-text2 {
+  width: 300px;
+  padding: 20px 15px 10px 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  position: absolute;
+  bottom: 304px;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+.photo-text2.translateY {
+  transform: translateY(99%);
+}
+
+.photo-text2 hr {
+  width: 150px;
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+.photo-text2 span {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+/* 房型分隔線 */
+.cabin-hr {
+  width: 1200px;
+  margin: auto;
+  margin-top: 90px;
+  border: 2px solid #615F58;
+}
+
+/* 房型2內文線條 */
+.family-hr {
+  width: 80px;
+  border: 1px solid #504f4d;
+  position: absolute;
+  right: 20px;
+  top: 158px;
+}
+
+.cabin2 {
+  margin-top: 120px;
+}
+
+/* --------------------小叮嚀--------------- */
+.rule {
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.rule-text {
+  width: 850px;
+  height: 450px;
+  padding: 40px;
+  border-radius: 40px;
+  background-color: #F0F0E4;
+  box-sizing: border-box;
+  position: absolute;
+  top: 65px;
+}
+
+.rule-text h3 {
+  width: 240px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-family: 'Potta One', sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: #615F58;
+}
+
+.rule-text p {
+  font-size: 18px;
+  letter-spacing: 1px;
+
+}
+
+/* --------------------------------頁尾-------------------------------- */
+.footer {
+  width: 100%;
+  height: 250px;
+  background-color: #636E7F;
+  margin-top: 100px;
+  border-radius: 100px 100px 0 0;
+  display: flex;
+  justify-content: center;
+  /* 水平方向居中 */
+  align-items: center;
+  /* 垂直方向居中 */
+}
+
+.footer-top {
+  width: 1200px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-list {
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列 p 元素 */
+  justify-content: space-between;
+  /* 垂直方向上均匀分布 */
+}
+
+.list {
+  width: 350px;
+  height: 24px;
+  display: flex;
+}
+
+.list p {
+  font-size: 18px;
+  color: #F6EED1;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+
+.list i {
+  color: #F6EED1;
+}
+
+.call {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #615F58;
+  letter-spacing: 1px;
+}
+
+
+.footer-logo {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-media {
+  width: 300px;
+  height: 50.53px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* 垂直方向上均匀分布 */
+}
+
+.footer-media i {
+  width: 42px;
+  height: 44px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fa-square-facebook:hover {
+  color: #0866FF;
+}
+
+.fa-instagram:hover {
+  height: 48px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: linear-gradient(to right top, #F7AE4E, #B930AF);
+}
+
+.fa-tiktok:hover {
+  color: #000000;
+  text-shadow: 4px 4px 1px #ffffff;
+}
+
+.fa-line:hover {
+  border-radius: 50%;
+  background-color: #fff;
+  color: #00CB42;
+}
+
+
+.footer-end {
+  width: 100%;
+  height: 30px;
+  background-color: #615F58;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+}
+
+.end-p {
+  width: 1200px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+}
+
+.end-p p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 30px;
+}

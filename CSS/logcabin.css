@@ -34,14 +34,14 @@ h5 {
   height: 100%;
   position: relative;
   padding: 0 40px;
-  background-color: #7A8492;
+  /* background-color: #7A8492; */
   background-image: url(../assets/logcabin/logcabin-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading {
     padding: 0;
   }
@@ -60,7 +60,7 @@ h5 {
   position: relative;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading__content {
     min-height: 500px;
   }
@@ -108,7 +108,7 @@ h5 {
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading__text {
     padding: 20px;
     margin: 90px 0 40px 0;
@@ -131,7 +131,7 @@ h5 {
   color: #ffffff;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading__title {
     margin-bottom: 16px;
     font-size: 28px;
@@ -144,7 +144,7 @@ h5 {
   line-height: 26px;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading__description {
     font-size: 14px;
   }
@@ -163,7 +163,7 @@ h5 {
   animation: image 0.6s 0.2s ease backwards;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 768px) {
   .mainHeading__image {
     height: 480px;
     width: 70%;

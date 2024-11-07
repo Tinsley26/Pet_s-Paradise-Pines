@@ -84,7 +84,7 @@ nav .header-list {
     transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 1022px) {
+@media screen and (max-width: 1023px) {
     .header-list li {
         margin: 5.7px;
         font-size: 16px;
@@ -128,6 +128,8 @@ nav .header-list {
         height: 80px;
         display: flex;
         position: absolute;
+        top: 0;
+        left: 0;
         background-color: #636E7F;
         z-index: 2;
     }
